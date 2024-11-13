@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     var addDataButton = UIButton(type: .roundedRect)
     var clearDataButton = UIButton()
     // == incoming Data ==
-    let nameUser = "Иван"
-    let surnameUser = "Калита"
+    let nameUser = "Александр III"
+    let surnameUser = "Романов"
     let streamNumber = "ios 9"
     // ===================
     
@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         addDataButton.frame = CGRect(x: 23, y: viewHeight - 202, width: viewWidth - 46, height: 69)
         addDataButton.backgroundColor = UIColor.black
         addDataButton.layer.cornerRadius = 20
+        addDataButton.addTarget(self, action: #selector(openSecondViewController), for: .touchUpInside)
 
         //Вторая кнопка
         clearDataButton.setTitle("Очистить данные", for: .normal)
@@ -77,6 +78,11 @@ class ViewController: UIViewController {
         view.addSubview(clearDataButton)
 
     }
+    
+        @objc func openSecondViewController() {
+            let secondViewController = SecondViewController()
+            self.present(secondViewController, animated: true, completion: nil)
+        }
 
 }
 
