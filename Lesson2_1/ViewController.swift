@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         //Ширина и высота фрейма
         let viewWidth = view.frame.size.width
         let viewHeight = view.frame.size.height
-        let buttonFont = UIFont(name: "boldSystemFont", size: 16)
+        let buttonFont = UIFont.boldSystemFont(ofSize: 16)
 
         //Первая кнопка
         addDataButton.setTitle("Добавить данные", for: .normal)
